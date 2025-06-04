@@ -91,7 +91,7 @@ const HomeSection = () => {
           {/* Brain Image */}
           <div className="w-full lg:w-[45%] h-[220px] sm:h-[300px] lg:h-full">
             <Image
-              src="/brain.png"
+              src="/Brain.png"
               alt="Brain"
               width={500}
               height={200}
