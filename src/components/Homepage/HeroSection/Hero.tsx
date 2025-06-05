@@ -2,40 +2,10 @@ import React from "react";
 import { BorderBeam } from "@/components/magicui/border-beam";
 import { GradientButton } from "@/components/GradientButton";
 import Image from "next/image";
-import FancyBlock from "./FancyBlock";
 
-const cards = [
-  {
-    title: "Custom-Built for Your Business",
-    description:
-      "Tailored to your enterprise — trained on internal systems, real workflows, and domain-specific data.",
-    image: "/assets/lock.png",
-  },
-  {
-    title: "Always-On Specialists",
-    description:
-      "24/7 digital teammates that handle requests instantly and grow smarter over time.",
-    image: "/assets/timer.png",
-  },
-  {
-    title: "Thinks, Decides, Executes",
-    description:
-      "Understands business context. Takes initiative. Completes tasks from start to finish.",
-    image: "/assets/dna.png",
-  },
-];
-
-const HomeSection = () => {
+const Hero = () => {
   return (
-    
-    <section className="w-full h-auto relative">
-       <Image
-              src="/svgs/radial.svg"
-              alt="Brain"
-              width={500}
-              height={200}
-              className="w-full h-full -z-10 absolute top-0 "
-            />
+    <>
       {/* Start Of Hero Section */}
       <div className="w-[90%] h-auto lg:h-[85vh] mx-auto flex flex-col lg:block">
         {/* Heading */}
@@ -91,7 +61,7 @@ const HomeSection = () => {
           {/* Brain Image */}
           <div className="w-full lg:w-[45%] h-[220px] sm:h-[300px] lg:h-full">
             <Image
-              src="/Brain.png"
+              src="/assets/brain.png"
               alt="Brain"
               width={500}
               height={200}
@@ -101,56 +71,8 @@ const HomeSection = () => {
         </div>
       </div>
       {/* End Of Hero Section */}
+    </>
+  )
+}
 
-      {/* Start Of Info Section */}
-      <div className="w-[90%] h-auto lg:h-[100vh] mx-auto mt-10 flex flex-col items-center">
-        
-          <FancyBlock>
-             Agentic AI
-          </FancyBlock>
-        <div className="mt-8 w-auto text-center">
-          <h1 className="text-[var(--primary)] text-4xl">
-            Your{" "}
-            <span className="gradient-linear-text font-semibold">
-              Differentiator
-            </span>
-          </h1>
-          <p className="mt-4 text-lg">
-            AI Agents That Think, Learn, and Deliver
-          </p>
-          <p className="text-lg">
-            AI Agent is a new SaaS: autonomous, adaptive, and outcome-driven.
-          </p>
-          <p className="text-lg">
-            It doesn’t just support your team — it becomes part of it.
-          </p>
-        </div>
-
-        <div className="w-[90%] h-auto mt-8 flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10 lg:gap-4 px-4 py-4">
-          {cards.map((card) => (
-            <div key={card.title} className="w-[300px] h-[300px] flex-shrink-0">
-              <div className="w-full h-[60%]">
-                <Image
-                  src={card.image}
-                  alt={card.title}
-                  width={500}
-                  height={200}
-                  className="w-full h-full object-contain rounded-lg"
-                />
-              </div>
-              <div className="px-2 mt-3 py-1 gap-2 flex flex-col items-center justify-center text-center">
-                <h3 className="text-[var(--primary)] text-lg font-semibold">
-                  {card.title}
-                </h3>
-                <p className="text-sm">{card.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-      {/* End Of Info Section */}
-    </section>
-  );
-};
-
-export default HomeSection;
+export default Hero

@@ -1,45 +1,63 @@
+'use client';
+
 import React from "react";
 import Image from "next/image";
-import FancyBlock from "../Homepage/FancyBlock";
+import FancyBlock from "@/components/Homepage/FancyBlock";
 
-const cards = [
+// 1. Define a type for the cards
+interface Card {
+  title: string;
+  description: string;
+  image: string;
+}
+
+// 2. Array of cards with strong typing
+const cards: Card[] = [
   {
-    title: "13+ Years in Enterprise AI",
+    title: "Custom-Built for Your Business",
     description:
-      "Proven expertise in regulated sectors and real-world enterprise challenges.",
-    image: "/assets/cloud.jpg",
+      "Tailored to your enterprise — trained on internal systems, real workflows, and domain-specific data.",
+    image: "/assets/lock.png",
   },
   {
-    title: "200+ Global Deployments",
+    title: "Always-On Specialists",
     description:
-      "Trusted across industries including healthcare, logistics, and finance",
-    image: "/assets/building.jpg",
+      "24/7 digital teammates that handle requests instantly and grow smarter over time.",
+    image: "/assets/timer.png",
   },
   {
-    title: "300+ Engineers, 3 Countries",
+    title: "Thinks, Decides, Executes",
     description:
-      "Experts in LLM agents for business, secure integrations, and scalable architecture.",
-    image: "/assets/glass.jpg",
+      "Understands business context. Takes initiative. Completes tasks from start to finish.",
+    image: "/assets/dna.png",
   },
 ];
 
-const Features = () => {
+// 3. Component
+const Glass = () => {
   return (
     <div className="w-[90%] h-auto lg:h-[100vh] mx-auto mt-10 flex flex-col items-center">
-      <FancyBlock>Why pacewisdom AI </FancyBlock>
+      {/* FancyBlock Section */}
+      <FancyBlock>Agentic AI</FancyBlock>
+
+      {/* Heading */}
       <div className="mt-8 w-auto text-center">
         <h1 className="text-[var(--primary)] text-4xl">
-          Not just SaaS -{" "}
+          Your{" "}
           <span className="gradient-linear-text font-semibold">
-            Your AI Teammate
+            Differentiator
           </span>
         </h1>
-        <p className="mt-4 text-lg">
-          We build autonomous agents that learn, adapt, and deliver
+        <p className="mt-4 text-lg">AI Agents That Think, Learn, and Deliver</p>
+        <p className="text-lg">
+          AI Agent is a new SaaS: autonomous, adaptive, and outcome-driven.
         </p>
-        <p className="text-lg">real outcomes — at enterprise scale.</p>
+        <p className="text-lg">
+          It doesn’t just support your team — it becomes part of it.
+        </p>
       </div>
 
+      {/* Cards Section */}
       <div className="w-[90%] h-auto mt-8 flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10 lg:gap-4 px-4 py-4">
         {cards.map((card) => (
           <div key={card.title} className="w-[300px] h-[300px] flex-shrink-0">
@@ -65,4 +83,4 @@ const Features = () => {
   );
 };
 
-export default Features;
+export default Glass;

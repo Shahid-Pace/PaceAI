@@ -1,8 +1,15 @@
 import React from "react";
-import FancyBlock from "../Homepage/FancyBlock";
+import FancyBlock from "../FancyBlock";
 import Image from "next/image";
 
-const features = [
+// 1. Define a type for the cards
+interface Feature {
+  icon:string
+  title: string;
+  description: string;
+}
+
+const features: Feature[] = [
   {
     icon: "minibrain",
     title: "Trained on Your Data",
