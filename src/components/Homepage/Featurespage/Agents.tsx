@@ -1,5 +1,5 @@
 import React from "react";
-import FancyBlock from "../Homepage/FancyBlock";
+import FancyBlock from "../FancyBlock";
 import Image from "next/image";
 import {
   Accordion,
@@ -8,7 +8,16 @@ import {
   AccordionContent,
 } from "@/components/ui/accordion";
 
-const industryFaqs = [
+
+// 1. Define a type for the cards
+interface IndustryFaq {
+  title: string;
+  description: string;
+  points:string[];
+  image: string;
+}
+
+const industryFaqs: IndustryFaq[] = [
   {
     title: "Healthcare",
     description:
@@ -49,6 +58,8 @@ const industryFaqs = [
     image: "/assets/logistics.jpg",
   },
 ];
+
+
 const Agents = () => {
   return (
     <div className="w-[90%] h-auto lg:h-auto mx-auto  flex flex-col relative">

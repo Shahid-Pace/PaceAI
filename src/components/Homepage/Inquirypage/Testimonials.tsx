@@ -1,5 +1,5 @@
 import React from 'react'
-import { TweetCard } from './TweetCard'
+import { TweetCard } from './helper/TweetCard'
 
 const Testimonials = () => {
   return (
@@ -14,7 +14,6 @@ const Testimonials = () => {
         </p>
       </div>
     <TweetCard/>
-
     </div>
   )
 }

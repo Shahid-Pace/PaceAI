@@ -5,7 +5,16 @@ import { Marquee } from "@/components/magicui/marquee";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Image from "next/image";
 
-const reviews = [
+// 1. Define a type for the cards
+interface Review {
+  name: string;
+  username: string;
+  body:string;
+  img: string;
+}
+
+
+const reviews: Review[] = [
   {
     name: "Lionel Messi",
     username: "@CTO, Healthcare Provider",

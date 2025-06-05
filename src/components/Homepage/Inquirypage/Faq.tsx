@@ -6,7 +6,14 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const faqs = [
+
+// 1. Define a type for the cards
+interface Faq {
+  question:string;
+  answer:string;
+}
+
+const faqs: Faq[] = [
   {
     question: "What is an AI Agent and how is it different from a chatbot?",
     answer:

@@ -1,12 +1,12 @@
 import React from 'react';
-import HomeSection from '@/components/Homepage/HomeSection';
-import FeatureSection from '@/components/Homepage/FeaturesSection';
-import InquirySection from '@/components/Homepage/InquirySection';
+import HomeSection from '@/components/Homepage/HeroSection/HomeSection';
+import FeatureSection from '@/components/Homepage/Featurespage/FeaturesSection';
+import InquirySection from '@/components/Homepage/Inquirypage/InquirySection';
 
 export default function Home() {
   return (
     <>
-        <HomeSection />
+        <HomeSection/>
         <FeatureSection/>
         <InquirySection/>
     </>
